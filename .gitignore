@@ -88,3 +88,132 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+RickMorty/Pods/Alamofire/README.md
+RickMorty/Pods/Alamofire/Source/AFError.swift
+RickMorty/Pods/Alamofire/Source/Alamofire.swift
+RickMorty/Pods/Alamofire/Source/AlamofireExtended.swift
+RickMorty/Pods/Alamofire/Source/AuthenticationInterceptor.swift
+RickMorty/Pods/Alamofire/Source/CachedResponseHandler.swift
+RickMorty/Pods/Alamofire/Source/Combine.swift
+RickMorty/Pods/Alamofire/Source/Concurrency.swift
+RickMorty/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+RickMorty/Pods/Alamofire/Source/EventMonitor.swift
+RickMorty/Pods/Alamofire/Source/HTTPHeaders.swift
+RickMorty/Pods/Alamofire/Source/HTTPMethod.swift
+RickMorty/Pods/Alamofire/Source/MultipartFormData.swift
+RickMorty/Pods/Alamofire/Source/MultipartUpload.swift
+RickMorty/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+RickMorty/Pods/Alamofire/Source/Notifications.swift
+RickMorty/Pods/Alamofire/Source/OperationQueue+Alamofire.swift
+RickMorty/Pods/Alamofire/Source/ParameterEncoder.swift
+RickMorty/Pods/Alamofire/Source/ParameterEncoding.swift
+RickMorty/Pods/Alamofire/Source/Protected.swift
+RickMorty/Pods/Alamofire/Source/RedirectHandler.swift
+RickMorty/Pods/Alamofire/Source/Request.swift
+RickMorty/Pods/Alamofire/Source/RequestInterceptor.swift
+RickMorty/Pods/Alamofire/Source/RequestTaskMap.swift
+RickMorty/Pods/Alamofire/Source/Response.swift
+RickMorty/Pods/Alamofire/Source/ResponseSerialization.swift
+RickMorty/Pods/Alamofire/Source/Result+Alamofire.swift
+RickMorty/Pods/Alamofire/Source/RetryPolicy.swift
+RickMorty/Pods/Alamofire/Source/ServerTrustEvaluation.swift
+RickMorty/Pods/Alamofire/Source/Session.swift
+RickMorty/Pods/Alamofire/Source/SessionDelegate.swift
+RickMorty/Pods/Alamofire/Source/StringEncoding+Alamofire.swift
+RickMorty/Pods/Alamofire/Source/URLConvertible+URLRequestConvertible.swift
+RickMorty/Pods/Alamofire/Source/URLEncodedFormEncoder.swift
+RickMorty/Pods/Alamofire/Source/URLRequest+Alamofire.swift
+RickMorty/Pods/Alamofire/Source/URLSessionConfiguration+Alamofire.swift
+RickMorty/Pods/Alamofire/Source/Validation.swift
+RickMorty/Pods/Kingfisher/README.md
+RickMorty/Pods/Kingfisher/Sources/Cache/CacheSerializer.swift
+RickMorty/Pods/Kingfisher/Sources/Cache/DiskStorage.swift
+RickMorty/Pods/Kingfisher/Sources/Cache/FormatIndicatedCacheSerializer.swift
+RickMorty/Pods/Kingfisher/Sources/Cache/ImageCache.swift
+RickMorty/Pods/Kingfisher/Sources/Cache/MemoryStorage.swift
+RickMorty/Pods/Kingfisher/Sources/Cache/Storage.swift
+RickMorty/Pods/Kingfisher/Sources/Extensions/CPListItem+Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/Extensions/ImageView+Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/Extensions/NSButton+Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/Extensions/NSTextAttachment+Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/Extensions/TVMonogramView+Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/Extensions/UIButton+Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/Extensions/WKInterfaceImage+Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/General/KF.swift
+RickMorty/Pods/Kingfisher/Sources/General/KFOptionsSetter.swift
+RickMorty/Pods/Kingfisher/Sources/General/Kingfisher.swift
+RickMorty/Pods/Kingfisher/Sources/General/KingfisherError.swift
+RickMorty/Pods/Kingfisher/Sources/General/KingfisherManager.swift
+RickMorty/Pods/Kingfisher/Sources/General/KingfisherOptionsInfo.swift
+RickMorty/Pods/Kingfisher/Sources/General/ImageSource/AVAssetImageDataProvider.swift
+RickMorty/Pods/Kingfisher/Sources/General/ImageSource/ImageDataProvider.swift
+RickMorty/Pods/Kingfisher/Sources/General/ImageSource/Resource.swift
+RickMorty/Pods/Kingfisher/Sources/General/ImageSource/Source.swift
+RickMorty/Pods/Kingfisher/Sources/Image/Filter.swift
+RickMorty/Pods/Kingfisher/Sources/Image/GIFAnimatedImage.swift
+RickMorty/Pods/Kingfisher/Sources/Image/GraphicsContext.swift
+RickMorty/Pods/Kingfisher/Sources/Image/Image.swift
+RickMorty/Pods/Kingfisher/Sources/Image/ImageDrawing.swift
+RickMorty/Pods/Kingfisher/Sources/Image/ImageFormat.swift
+RickMorty/Pods/Kingfisher/Sources/Image/ImageProcessor.swift
+RickMorty/Pods/Kingfisher/Sources/Image/ImageProgressive.swift
+RickMorty/Pods/Kingfisher/Sources/Image/ImageTransition.swift
+RickMorty/Pods/Kingfisher/Sources/Image/Placeholder.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/AuthenticationChallengeResponsable.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/ImageDataProcessor.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/ImageDownloader.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/ImageDownloaderDelegate.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/ImageModifier.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/ImagePrefetcher.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/RedirectHandler.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/RequestModifier.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/RetryStrategy.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/SessionDataTask.swift
+RickMorty/Pods/Kingfisher/Sources/Networking/SessionDelegate.swift
+RickMorty/Pods/Kingfisher/Sources/SwiftUI/ImageBinder.swift
+RickMorty/Pods/Kingfisher/Sources/SwiftUI/ImageContext.swift
+RickMorty/Pods/Kingfisher/Sources/SwiftUI/KFAnimatedImage.swift
+RickMorty/Pods/Kingfisher/Sources/SwiftUI/KFImage.swift
+RickMorty/Pods/Kingfisher/Sources/SwiftUI/KFImageOptions.swift
+RickMorty/Pods/Kingfisher/Sources/SwiftUI/KFImageProtocol.swift
+RickMorty/Pods/Kingfisher/Sources/SwiftUI/KFImageRenderer.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/Box.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/CallbackQueue.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/Delegate.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/ExtensionHelpers.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/Result.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/Runtime.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/SizeExtensions.swift
+RickMorty/Pods/Kingfisher/Sources/Utility/String+MD5.swift
+RickMorty/Pods/Kingfisher/Sources/Views/AnimatedImageView.swift
+RickMorty/Pods/Kingfisher/Sources/Views/Indicator.swift
+RickMorty/Pods/Pods.xcodeproj/project.pbxproj
+RickMorty/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+RickMorty/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+RickMorty/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+RickMorty/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+RickMorty/Pods/Target Support Files/Alamofire/Alamofire.debug.xcconfig
+RickMorty/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+RickMorty/Pods/Target Support Files/Alamofire/Alamofire.release.xcconfig
+RickMorty/Pods/Target Support Files/Kingfisher/Kingfisher-dummy.m
+RickMorty/Pods/Target Support Files/Kingfisher/Kingfisher-Info.plist
+RickMorty/Pods/Target Support Files/Kingfisher/Kingfisher-prefix.pch
+RickMorty/Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h
+RickMorty/Pods/Target Support Files/Kingfisher/Kingfisher.debug.xcconfig
+RickMorty/Pods/Target Support Files/Kingfisher/Kingfisher.modulemap
+RickMorty/Pods/Target Support Files/Kingfisher/Kingfisher.release.xcconfig
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-acknowledgements.markdown
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-acknowledgements.plist
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-dummy.m
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-frameworks-Debug-input-files.xcfilelist
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-frameworks-Debug-output-files.xcfilelist
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-frameworks-Release-input-files.xcfilelist
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-frameworks-Release-output-files.xcfilelist
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-frameworks.sh
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-Info.plist
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty-umbrella.h
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty.debug.xcconfig
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty.modulemap
+RickMorty/Pods/Target Support Files/Pods-RickMorty/Pods-RickMorty.release.xcconfig
+RickMorty/RickMorty.xcworkspace/contents.xcworkspacedata
+RickMorty/RickMorty.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
