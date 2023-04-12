@@ -21,11 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: winScene)
         window.makeKeyAndVisible()
         
-        let navigationController = UINavigationController()
-        window.rootViewController = navigationController
-        
-        let coordinator = Coordinator(navigationController: navigationController)
-        coordinator.startRickMortyPersonList()
+        let vc = RMTabBarViewController()
+        window.rootViewController = vc
         self.window = window
     }
 
