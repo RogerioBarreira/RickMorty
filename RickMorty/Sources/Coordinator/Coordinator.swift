@@ -17,9 +17,4 @@ class Coordinator: NSObject {
         }
         self.navigationController = navigationController ?? UINavigationController()
     }
-    
-    func startRickMortyPersonList() {
-        let viewController = RickMortyPersonListViewController()
-        self.navigationController.pushViewController(viewController, animated: true)
-    }
 }

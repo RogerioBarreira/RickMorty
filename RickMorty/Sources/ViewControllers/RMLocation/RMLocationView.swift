@@ -1,14 +1,14 @@
 //
-//  RickMortyPersonListView.swift
+//  RMLocationView.swift
 //  RickMorty
 //
-//  Created by Rogerio Martins on 30/03/23.
+//  Created by Rogerio Martins on 12/04/23.
 //
 
 import UIKit
 
-class RickMortyPersonListView: UIView {
-    
+class RMLocationView: UIView {
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
