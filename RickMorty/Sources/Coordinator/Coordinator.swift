@@ -10,11 +10,20 @@ import UIKit
 class Coordinator: NSObject {
     
     var navigationController: UINavigationController
+    let vcCharacter = RMCharacterViewController()
+    let vcLocation = RMLocationViewController()
+    let vcEpisodes = RMEpisodesViewController()
+    let vcSettings = RMSettingsViewController()
     
     init(navigationController: UINavigationController?) {
         if navigationController == nil {
             self.navigationController = UINavigationController()
         }
         self.navigationController = navigationController ?? UINavigationController()
+    }
+    
+    func startTabBar() {
+        let viewController = RMTabBarViewController()
+        self.navigationController.pushViewController(viewController, animated: true)
     }
 }

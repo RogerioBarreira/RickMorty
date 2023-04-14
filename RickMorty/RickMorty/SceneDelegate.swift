@@ -21,8 +21,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: winScene)
         window.makeKeyAndVisible()
         
-        let vc = RMTabBarViewController()
-        window.rootViewController = vc
+        let navigationController = UINavigationController()
+        window.rootViewController = navigationController
+        
+        let coordinator = Coordinator(navigationController: navigationController)
+        coordinator.startTabBar()
         self.window = window
     }
 
