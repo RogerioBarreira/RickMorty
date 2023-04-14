@@ -26,4 +26,9 @@ class Coordinator: NSObject {
         let viewController = RMTabBarViewController()
         self.navigationController.pushViewController(viewController, animated: true)
     }
+    
+    func startRMDetailCharacter() {
+        let viewController = RMCharacterDetailViewController()
+        self.navigationController.pushViewController(viewController, animated: true)
+    }
 }

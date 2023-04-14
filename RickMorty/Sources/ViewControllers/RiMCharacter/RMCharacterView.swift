@@ -17,6 +17,26 @@ class RMCharacterView: UIView {
         return label
     }()
     
+    let rmTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.showsVerticalScrollIndicator = false
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        return tableView
+    }()
+    
+    let loading: UIActivityIndicatorView = {
+        let load = UIActivityIndicatorView()
+        load.translatesAutoresizingMaskIntoConstraints = false
+        load.color = .label
+        load.backgroundColor = .clear
+        load.frame.size = CGSize(width: 50, height: 50)
+        let scale = CGAffineTransform(scaleX: 3, y: 3)
+        load.transform = scale
+        return load
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configConstraints()
@@ -28,6 +48,8 @@ class RMCharacterView: UIView {
     
     func configConstraints() {
         setupTitleNav()
+        setupTableView()
+        setupLoad()
     }
     
     func setupTitleNav() {
@@ -36,6 +58,24 @@ class RMCharacterView: UIView {
             titleNav.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             titleNav.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             titleNav.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+        ])
+    }
+    
+    func setupTableView() {
+        addSubview(rmTableView)
+        NSLayoutConstraint.activate([
+            rmTableView.topAnchor.constraint(equalTo: titleNav.bottomAnchor),
+            rmTableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            rmTableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            rmTableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
+    
+    func setupLoad() {
+        addSubview(loading)
+        NSLayoutConstraint.activate([
+            loading.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            loading.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
     }
 }
