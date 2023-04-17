@@ -215,23 +215,6 @@ class TableViewCellRMCharacter: UITableViewCell {
         especieChar.text = char?.species?.rawValue
         lastLocationChar.text = char?.location?.name ?? ""
         origemChar.text = char?.origin?.name ?? ""
-        
-        var image: UIImage?
-        var color: UIColor?
-        
-        switch char?.status?.rawValue {
-        case "Alive":
-            image = UIImage(systemName: "circle.fill")
-            color = UIColor.green
-        case "Dead":
-            image = UIImage(systemName: "circle.fill")
-            color = UIColor.red
-        default:
-            image = UIImage(systemName: "questionmark.circle")
-            color = UIColor.yellow
-        }
-        
-        imageStatusChar.image = image
-        imageStatusChar.tintColor = color
+        imageStatusChar.image = char?.status?.image ?? UIImage()
     }
 }

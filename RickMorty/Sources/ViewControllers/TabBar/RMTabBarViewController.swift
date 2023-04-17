@@ -8,12 +8,12 @@
 import UIKit
 
 class RMTabBarViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         vcSetup()
     }
-
+    
     func vcSetup() {
         
         let nav = Coordinator(navigationController: navigationController.self)

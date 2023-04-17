@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Character
 struct Character: Codable {
@@ -56,4 +57,17 @@ enum Status: String, Codable {
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "unknown"
+}
+
+extension Status {
+    var image: UIImage? {
+        switch self {
+        case .alive:
+            return UIImage(systemName: "circle.fill")?.withTintColor(.green, renderingMode: .alwaysOriginal)
+        case .dead:
+            return UIImage(systemName: "circle.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
+        case .unknown:
+            return UIImage(systemName: "questionmark.circle")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
+        }
+    }
 }
