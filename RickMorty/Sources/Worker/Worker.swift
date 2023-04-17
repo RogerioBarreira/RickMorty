@@ -8,7 +8,7 @@
 import Foundation
 
 class Worker: NSObject {
-    
+    private var myLocation: Locations?
     private var myCharacter: Character?
     private let network = Network()
     
@@ -20,6 +20,19 @@ class Worker: NSObject {
             case true:
                 self.myCharacter = myCharacter
                 completion(myCharacter,true)
+            case false:
+                completion(nil,false)
+            }
+        }
+    }
+    
+    func workerRMLocation(completion: @escaping (Locations?,Bool)-> Void) {
+        network.network(urlString: "https://rickandmortyapi.com/api/location", method: .get, custom: Locations.self) { [weak self] myLocation, success in
+            guard let self = self else { return }
+            switch success {
+            case true:
+                self.myLocation = myLocation
+                completion(myLocation,true)
             case false:
                 completion(nil,false)
             }
