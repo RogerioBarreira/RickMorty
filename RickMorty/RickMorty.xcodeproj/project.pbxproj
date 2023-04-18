@@ -29,6 +29,8 @@
 		B68AA2FB29E8DABC00998BBF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA2FA29E8DABC00998BBF /* Network.swift */; };
 		B68AA2FE29E8E68500998BBF /* TableViewCellRMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA2FD29E8E68500998BBF /* TableViewCellRMCharacter.swift */; };
 		B68AA30029E8EB1E00998BBF /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68AA2FF29E8EB1E00998BBF /* Worker.swift */; };
+		B6B2047A29EE21DB009C24F5 /* RMEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2047929EE21DB009C24F5 /* RMEndpoint.swift */; };
+		B6B2047D29EE230F009C24F5 /* RMBaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B2047C29EE230F009C24F5 /* RMBaseUrl.swift */; };
 		B6B78F3129D5CB1C00254D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B78F3029D5CB1C00254D14 /* AppDelegate.swift */; };
 		B6B78F3329D5CB1C00254D14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B78F3229D5CB1C00254D14 /* SceneDelegate.swift */; };
 		B6B78F3A29D5CB1E00254D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B78F3929D5CB1E00254D14 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		B68AA2FA29E8DABC00998BBF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		B68AA2FD29E8E68500998BBF /* TableViewCellRMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellRMCharacter.swift; sourceTree = "<group>"; };
 		B68AA2FF29E8EB1E00998BBF /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		B6B2047929EE21DB009C24F5 /* RMEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndpoint.swift; sourceTree = "<group>"; };
+		B6B2047C29EE230F009C24F5 /* RMBaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBaseUrl.swift; sourceTree = "<group>"; };
 		B6B78F2D29D5CB1C00254D14 /* RickMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B78F3029D5CB1C00254D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6B78F3229D5CB1C00254D14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +193,22 @@
 			path = TableViewCekkRMCharacteer;
 			sourceTree = "<group>";
 		};
+		B6B2047829EE2186009C24F5 /* RMEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B6B2047929EE21DB009C24F5 /* RMEndpoint.swift */,
+			);
+			path = RMEndpoint;
+			sourceTree = "<group>";
+		};
+		B6B2047B29EE22D9009C24F5 /* RMBaseUrl */ = {
+			isa = PBXGroup;
+			children = (
+				B6B2047C29EE230F009C24F5 /* RMBaseUrl.swift */,
+			);
+			path = RMBaseUrl;
+			sourceTree = "<group>";
+		};
 		B6B78F2429D5CB1C00254D14 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +243,8 @@
 		B6B78F4429D5D10A00254D14 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B6B2047B29EE22D9009C24F5 /* RMBaseUrl */,
+				B6B2047829EE2186009C24F5 /* RMEndpoint */,
 				B6782C0F29E98A4F00A85EBE /* Utils */,
 				B6B78F4529D5D11F00254D14 /* Coordinator */,
 				B6B78F5029D5D5FA00254D14 /* Model */,
@@ -414,6 +436,7 @@
 				B681921D29E6F30900AE4ACE /* RMLocationView.swift in Sources */,
 				B6B78F4E29D5D36700254D14 /* RMCharacterViewModel.swift in Sources */,
 				B681921529E6F25900AE4ACE /* RMEpisodesViewController.swift in Sources */,
+				B6B2047D29EE230F009C24F5 /* RMBaseUrl.swift in Sources */,
 				B681921729E6F26E00AE4ACE /* RMEpisodesView.swift in Sources */,
 				B68AA30029E8EB1E00998BBF /* Worker.swift in Sources */,
 				B681922329E6F36C00AE4ACE /* RMSettingsViewController.swift in Sources */,
@@ -431,6 +454,7 @@
 				B6782C0E29E985C700A85EBE /* UICGColor+Extension.swift in Sources */,
 				B681921B29E6F2F300AE4ACE /* RMLocationViewController.swift in Sources */,
 				B681921F29E6F31700AE4ACE /* RMLocationViewModel.swift in Sources */,
+				B6B2047A29EE21DB009C24F5 /* RMEndpoint.swift in Sources */,
 				B6B78F4C29D5D2A900254D14 /* RMCharacterViewController.swift in Sources */,
 				B6B78F4729D5D13A00254D14 /* Coordinator.swift in Sources */,
 			);

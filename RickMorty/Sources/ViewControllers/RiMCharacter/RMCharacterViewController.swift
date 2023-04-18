@@ -34,10 +34,13 @@ class RMCharacterViewController: UIViewController {
     }
     
     func setupRequest() {
+        viewModelRMCharacterViewModel.loadRequest = true
         viewRMCharacter.loading.startAnimating()
         viewModelRMCharacterViewModel.requestRMCharacterViewModel { [weak self] success in
             guard let self = self else { return }
-            self.viewRMCharacter.loading.stopAnimating()
+            DispatchQueue.main.async {
+                self.viewRMCharacter.loading.stopAnimating()
+            }
             switch success {
             case true:
                 self.viewRMCharacter.rmTableView.reloadData()
@@ -67,6 +70,26 @@ extension RMCharacterViewController: UITableViewDelegate, UITableViewDataSource 
         tableView.deselectRow(at: indexPath, animated: true)
         let coordinator = Coordinator(navigationController: navigationController)
         coordinator.startRMDetailCharacter(detail: viewModelRMCharacterViewModel.cellForRowChar(indexPath: indexPath))
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == viewModelRMCharacterViewModel.addCharacter.count - 8 && indexPath.row != viewModelRMCharacterViewModel.totalChar {
+            
+            viewModelRMCharacterViewModel.addPage()
+            viewRMCharacter.loading.startAnimating()
+            viewModelRMCharacterViewModel.requestAddRMCharacterViewModel { [weak self] success in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.viewRMCharacter.loading.stopAnimating()
+                }
+                if success {
+                    self.viewModelRMCharacterViewModel.loadRequest = false
+                    self.viewRMCharacter.rmTableView.reloadData()
+                }
+                print(self.viewModelRMCharacterViewModel.currentPage)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

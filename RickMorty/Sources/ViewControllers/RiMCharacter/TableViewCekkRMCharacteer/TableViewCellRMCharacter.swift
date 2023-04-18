@@ -104,7 +104,7 @@ class TableViewCellRMCharacter: UITableViewCell {
     }()
     
     static let identifier = "TableViewCellRMCharacter"
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         configConstraints()
@@ -202,19 +202,25 @@ class TableViewCellRMCharacter: UITableViewCell {
         ])
     }
     
-    func setupCell(char: ResultChar?) {
+    func setupCell(char: Result?) {
         if let url = URL(string: char?.image ?? "") {
             imageChar.kf.indicatorType = .activity
             imageChar.kf.setImage(with: url)
         } else {
             imageChar.image = nil
         }
-        
         nameChar.text = char?.name ?? ""
         statusChar.text = char?.status?.rawValue
-        especieChar.text = char?.species?.rawValue
+        especieChar.text = char?.species ?? ""
         lastLocationChar.text = char?.location?.name ?? ""
         origemChar.text = char?.origin?.name ?? ""
-        imageStatusChar.image = char?.status?.image ?? UIImage()
+        switch char?.status?.rawValue {
+        case "Alive":
+            return imageStatusChar.image = UIImage(systemName: "circle.fill")?.withTintColor(.green, renderingMode: .alwaysOriginal)
+        case "Dead":
+            return  imageStatusChar.image = UIImage(systemName: "circle.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
+        default:
+            return imageStatusChar.image = UIImage(systemName: "questionmark.circle")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
+        }
     }
 }

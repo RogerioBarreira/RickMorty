@@ -12,9 +12,12 @@ class Worker: NSObject {
     private var myCharacter: Character?
     private let network = Network()
     
-    func workerRMCharacter(completion: @escaping (Character?,Bool)-> Void) {
-        
-        network.network(urlString: "https://rickandmortyapi.com/api/character", method: .get, custom: Character.self) { [weak self] myCharacter, success in
+    func workerRMCharacter(page: Int = 0, completion: @escaping (Character?,Bool)-> Void) {
+        let baseUrl = RMBaseUrl.baseUrl
+        let endPoint = RMEndpoint.Endpont.character.rawValue
+        var pages = "\(page)"
+        let url = "\(baseUrl)\(endPoint)/?page=\(pages)"
+        network.network(urlString: url, method: .get, custom: Character.self) { [weak self] myCharacter, success in
             guard let self = self else { return }
             switch success {
             case true:
@@ -27,7 +30,10 @@ class Worker: NSObject {
     }
     
     func workerRMLocation(completion: @escaping (Locations?,Bool)-> Void) {
-        network.network(urlString: "https://rickandmortyapi.com/api/location", method: .get, custom: Locations.self) { [weak self] myLocation, success in
+        let baseUrl = RMBaseUrl.baseUrl
+        let endPoint = RMEndpoint.Endpont.location.rawValue
+        let url = "\(baseUrl)\(endPoint)"
+        network.network(urlString: url, method: .get, custom: Locations.self) { [weak self] myLocation, success in
             guard let self = self else { return }
             switch success {
             case true:
