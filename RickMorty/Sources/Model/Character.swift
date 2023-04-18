@@ -6,30 +6,27 @@
 //
 
 import Foundation
-import UIKit
 
 // MARK: - Character
 struct Character: Codable {
-    let info: InfoChar?
-    let results: [ResultChar]?
+    let info: Info?
+    let results: [Result]?
 }
 
-// MARK: - InfoChar
-struct InfoChar: Codable {
+// MARK: - Info
+struct Info: Codable {
     let count, pages: Int?
-    let next: String?
-    let prev: String?
+    let next, prev: String?
 }
 
-// MARK: - ResultChar
-struct ResultChar: Codable {
+// MARK: - Result
+struct Result: Codable {
     let id: Int?
     let name: String?
     let status: Status?
-    let species: Species?
-    let type: String?
+    let species, type: String?
     let gender: Gender?
-    let origin, location: LocationChar?
+    let origin, location: Location?
     let image: String?
     let episode: [String]?
     let url: String?
@@ -42,32 +39,14 @@ enum Gender: String, Codable {
     case unknown = "unknown"
 }
 
-// MARK: - LocationChar
-struct LocationChar: Codable {
+// MARK: - Location
+struct Location: Codable {
     let name: String?
     let url: String?
-}
-
-enum Species: String, Codable {
-    case alien = "Alien"
-    case human = "Human"
 }
 
 enum Status: String, Codable {
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "unknown"
-}
-
-extension Status {
-    var image: UIImage? {
-        switch self {
-        case .alive:
-            return UIImage(systemName: "circle.fill")?.withTintColor(.green, renderingMode: .alwaysOriginal)
-        case .dead:
-            return UIImage(systemName: "circle.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
-        case .unknown:
-            return UIImage(systemName: "questionmark.circle")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
-        }
-    }
 }
