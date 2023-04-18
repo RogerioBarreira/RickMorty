@@ -10,7 +10,7 @@ import UIKit
 
 class RMCharacterDetailViewModel: NSObject {
     
-    private var myDetailChar: ResultChar?
+    private var myDetailChar: Result?
     
     var imageChar: URL? {
         return URL(string: myDetailChar?.image ?? "")
@@ -20,13 +20,19 @@ class RMCharacterDetailViewModel: NSObject {
         return myDetailChar?.name ?? ""
     }
     
-    var imageStatus: UIImage {
-        return myDetailChar?.status?.image ?? UIImage()
-        
+    var imageStatus: UIImage?{
+        switch myDetailChar?.status?.rawValue {
+        case "Alive":
+            return UIImage(systemName: "circle.fill")?.withTintColor(.green, renderingMode: .alwaysOriginal)
+        case "Dead":
+            return UIImage(systemName: "circle.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal)
+        default:
+            return UIImage(systemName: "questionmark.circle")?.withTintColor(.yellow, renderingMode: .alwaysOriginal)
+        }
     }
     
     var specieChar: String {
-        return myDetailChar?.species?.rawValue ?? ""
+        return myDetailChar?.species ?? ""
     }
     
     var statusCharDetail: String {
@@ -45,7 +51,7 @@ class RMCharacterDetailViewModel: NSObject {
         return myDetailChar?.origin?.name ?? ""
     }
     
-    func detailCharaceter(detail: ResultChar?) {
+    func detailCharaceter(detail: Result?) {
         self.myDetailChar = detail
     }
 }
